@@ -243,7 +243,7 @@ int main(int argc, char **argv)
 			// Receive Data From WHILL
 			if(events[i].data.fd == whill_fd) {
 				len = recvDataWHILL(whill_fd, recv_buf);
-				if(recv_buf[0] == DATASET_NUM_ONE && len == 31)
+				if(recv_buf[0] == DATASET_NUM_ONE && len == 30)
 				{
 					unsigned char checksum = 0x00;
 					for(int i = 0; i<=29; i++){
